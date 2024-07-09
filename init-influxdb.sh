@@ -19,12 +19,9 @@ influx setup --skip-verify \
   --retention 0 \
   --force
 
-# Отримання токена адміністратора
-ADMIN_TOKEN=$(curl -s -X GET "http://localhost:8086/api/v2/auth" -H "Authorization: Token $ADMIN_TOKEN" | grep -oP '(?<="token":")[^"]+')
-
 # Відновлення резервної копії, якщо вона існує
 if [ -d "$BACKUP_PATH" ]; then
-  influx restore --full "$BACKUP_PATH" --token $ADMIN_TOKEN
+  influx restore --full "$BACKUP_PATH"
 fi
 
 # Вбити фоновий процес InfluxDB
