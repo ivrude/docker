@@ -1,3 +1,7 @@
+Credentials
+Ivan | p@ssw0rd
+
+
 When you up containers go to cmd influx and use command
 influx restore /docker-entrypoint-initdb.d/influxdb-backup
 
