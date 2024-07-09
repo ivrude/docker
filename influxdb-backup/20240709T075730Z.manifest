@@ -1,0 +1,83 @@
+{
+  "manifestVersion": 2,
+  "kv": {
+    "fileName": "20240709T075730Z.bolt.gz",
+    "size": 3170,
+    "compression": 1
+  },
+  "sql": {
+    "fileName": "20240709T075730Z.sqlite.gz",
+    "size": 991,
+    "compression": 1
+  },
+  "buckets": [
+    {
+      "organizationID": "510f78b468ab0890",
+      "organizationName": "Chornobyl",
+      "bucketID": "3ec88bf26ed7f498",
+      "bucketName": "Graf",
+      "defaultRetentionPolicy": "autogen",
+      "retentionPolicies": [
+        {
+          "name": "autogen",
+          "replicaN": 1,
+          "duration": 0,
+          "shardGroupDuration": 604800000000000,
+          "shardGroups": [
+            {
+              "id": 1,
+              "startTime": "2024-07-08T00:00:00Z",
+              "endTime": "2024-07-15T00:00:00Z",
+              "shards": [
+                {
+                  "id": 1,
+                  "shardOwners": [],
+                  "fileName": "20240709T075730Z.1.tar.gz",
+                  "size": 981,
+                  "compression": 1
+                }
+              ]
+            }
+          ],
+          "subscriptions": []
+        }
+      ]
+    },
+    {
+      "organizationID": "510f78b468ab0890",
+      "organizationName": "Chornobyl",
+      "bucketID": "43976fb23d0e8313",
+      "bucketName": "_tasks",
+      "description": "System bucket for task logs",
+      "defaultRetentionPolicy": "autogen",
+      "retentionPolicies": [
+        {
+          "name": "autogen",
+          "replicaN": 1,
+          "duration": 259200000000000,
+          "shardGroupDuration": 86400000000000,
+          "shardGroups": [],
+          "subscriptions": []
+        }
+      ]
+    },
+    {
+      "organizationID": "510f78b468ab0890",
+      "organizationName": "Chornobyl",
+      "bucketID": "ed28ac2d6a607746",
+      "bucketName": "_monitoring",
+      "description": "System bucket for monitoring logs",
+      "defaultRetentionPolicy": "autogen",
+      "retentionPolicies": [
+        {
+          "name": "autogen",
+          "replicaN": 1,
+          "duration": 604800000000000,
+          "shardGroupDuration": 86400000000000,
+          "shardGroups": [],
+          "subscriptions": []
+        }
+      ]
+    }
+  ]
+}

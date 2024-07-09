@@ -1,0 +1,23 @@
+version: '3'
+services:
+  influxdb:
+    image: influxdb:2.1.1
+    ports:
+      - '8086:8086'
+    volumes:
+      - influxdb-data:/var/lib/influxdb2
+      - ./config.yml:/etc/influxdb2/config.yml
+      - ./init-influxdb.sh:/docker-entrypoint-initdb.d/init-influxdb.sh
+      - ./influxdb-backup:/docker-entrypoint-initdb.d/influxdb-backup
+    command: ["sh", "/docker-entrypoint-initdb.d/init-influxdb.sh"]
+
+  grafana:
+    image: irudenkokiev/grafa:latest
+    container_name: grafana1
+    ports:
+      - "3000:3000"
+    depends_on:
+      - influxdb
+
+volumes:
+  influxdb-data:

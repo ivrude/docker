@@ -1,0 +1,18 @@
+influxdb:
+  # Налаштування початкового користувача
+  users:
+    - username: Ivan
+      password: p@ssw0rd
+      permissions:
+        - all
+
+  # Налаштування організації
+  orgs:
+    - name: Chornobyl
+      users:
+        - username: Ivan
+
+  # Налаштування bucket
+  buckets:
+    - name: Graf
+      org: Chornobyl
