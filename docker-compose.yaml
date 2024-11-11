@@ -13,7 +13,7 @@ services:
     restart: always
 
   grafana:
-    image: irudenkokiev/grafa:latest
+    image: irudenkokiev/grafa:1.0.1
     container_name: grafana1
     ports:
       - "3000:3000"
